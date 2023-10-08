@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form onclick="preventDefault" >
+                <div class="display">
+                    <input type="text" readonly name="display">
+                </div>
+                <div>
+                    <button class="operator canc" value="C" onclick="display.value = '' ">C</button>
+                    <button  class="operator del" value="DE" onclick="display.value = display.value.toString().slice(0 ,-1) ">DE</button>
+                    <button class="operator" value="." onclick="display.value += '.' ">.</button>
+                    <button class="operator" value="/" onclick="display.value += '/' ">/</button>
+                </div>
+                <div>
+                    <button class="numBer" value="7" onclick="display.value += '7' ">7</button>
+                    <button class="numBer" value="8" onclick="display.value += '8' ">8</button>                   
+                    <button class="numBer" value="9" onclick="display.value += '9' ">9</button>                  
+                    <button class="operator" value="+" onclick="display.value += '+' " >+</button>
+                </div>
+                <div>
+                    <button class="numBer" value="4" onclick="display.value += '4' ">4 </button>
+                    <button class="numBer" value="5" onclick="display.value += '5' ">5 </button>
+                    <button class="numBer" value="6" onclick="display.value += '6' ">6 </button>
+                    <button class="operator" value="-" onclick="display.value += '-' ">-</button>
+                </div>
+                <div>
+                    <button class="numBer" value="1" onclick="display.value += '1' ">1</button>
+                    <button class="numBer" value="2" onclick="display.value += '2' ">2</button>
+                    <button class="numBer" value="3" onclick="display.value += '3' ">3</button>
+                    <button type="button" value="*" class="operator" onclick="display.value += '*' ">*</button>
+                </div>
+                <div>
+                    <button class="numBer" value="00" onclick="display.value += '00' ">00</button>
+                    <button class="numBer" value="0" onclick="display.value += '0' ">0</button>
+                    <button class="equal operator" value="=" onclick="display.value = eval(display.value) ">=</button>
+                </div>
+            </form>
+        </div>
+    </div>
+ 
+
+    <script src="./script.js"></script>
+</body>
+</html>
